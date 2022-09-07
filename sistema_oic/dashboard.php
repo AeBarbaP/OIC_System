@@ -98,21 +98,21 @@ include('prcd/conn.php');
         <p class="sidebar-heading d-flex justify-content-center text-center align-items-center px-3 mt-4 mb-1 text-muted" style="font-size: 1rem;">
           <span class=""><strong>Bienvenido<br><i class="fas fa-user"></i> 
             <?php
-              echo utf8_encode($nombre);
+              echo ($nombre);
             ?></strong>
           </span>
         </p>
         <hr>
         
         <?php
-        if($perfil == 1){
+/*         if($perfil == 1){
           echo '<ul class="nav flex-column">';
         }
 
         else{
           echo '<ul class="nav flex-column" hidden>';
         }
-        
+         */
         ?>
 
           <li class="nav-item">
@@ -121,8 +121,76 @@ include('prcd/conn.php');
               Inicio <span class="sr-only">(current)</span>
             </a>
           </li>
+
+
           <hr style="color: dimgrey;">
-          
+        
+        <?php
+/*         if($perfil == 1){
+          echo '<ul class="nav flex-column">';
+        }
+
+        else{
+          echo '<ul class="nav flex-column" hidden>';
+        }
+         */
+        ?>
+          <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+            <span>Años</span>
+            <a class="d-flex align-items-center text-muted" href="#" aria-label="Add a new report">
+              <span data-feather="plus-circle"></span>
+            </a>
+          </h6>
+
+          <li class="nav-item">
+            <a class="nav-link" href="trimestre1.php">
+              <span data-feather="layers"></span>
+              2022
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="trimestre2.php">
+              <span data-feather="layers"></span>
+              2023
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="trimestre3.php">
+              <span data-feather="layers"></span>
+              2024
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="trimestre4.php">
+              <span data-feather="layers"></span>
+              2025
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="trimestre4.php">
+              <span data-feather="layers"></span>
+              2026
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="trimestre4.php">
+              <span data-feather="layers"></span>
+              2026
+            </a>
+          </li>
+        </ul>
+
+        <?php
+/*         if($perfil == 1){
+          echo '<ul class="nav flex-column">';
+        }
+
+        else{
+          echo '<ul class="nav flex-column" hidden>';
+        }
+         */
+        ?>
+
           <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
             <span>AÑO 2022</span>
             <a class="d-flex align-items-center text-muted" href="#" aria-label="Add a new report">
@@ -157,13 +225,13 @@ include('prcd/conn.php');
         </ul>
 
         <?php
-        if($perfil == 2){
+/*         if($perfil == 2){
           echo '<ul class="nav flex-column">';
         }
 
         else{
           echo '<ul class="nav flex-column" hidden>';
-        }
+        } */
         
         ?>
         <!-- <ul class="nav flex-column mb-2"> -->
@@ -181,7 +249,7 @@ include('prcd/conn.php');
                       while($row = $resultadotabla->fetch_assoc()){
                           
                         echo '<li class="nav-item">';
-                        echo utf8_encode('<a class="nav-link" href="area.php?area='.$row['resp'].'">
+                        echo ('<a class="nav-link" href="area.php?area='.$row['resp'].'">
                           <span data-feather="file-text"></span>
                             '.$row['area'].'
                             
@@ -197,13 +265,13 @@ include('prcd/conn.php');
         <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
           
         <?php
-        if($perfil == 2){
+/*         if($perfil == 2){
           echo '<span>Plantillas</span>';
         }
 
         else{
           echo '<span></span>';
-        }
+        } */
         
         ?>
           <!-- <span>Plantillas</span> -->
@@ -214,13 +282,13 @@ include('prcd/conn.php');
         </h6>
 
         <?php
-        if($perfil == 2){
+/*         if($perfil == 2){
           echo '<ul class="nav flex-column">';
         }
 
         else{
           echo '<ul class="nav flex-column" hidden>';
-        }
+        } */
         
         ?>
         <!-- <ul class="nav flex-column mb-2"> -->
@@ -269,7 +337,7 @@ include('prcd/conn.php');
         }
 
         else{
-          echo '<div class="container" hidden>';
+          echo '<div class="container">'; /* agregar hidden para versión final */
         }
         
         ?>
